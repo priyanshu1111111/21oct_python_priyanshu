@@ -1,0 +1,15 @@
+n=int(input("Howmany student are there?="))
+lst=[]
+print("===============================")
+for i in range(n):
+    lst.append(input("Enter student name="))
+print("============result====================")
+print(lst) 
+print("========update===========")
+u=int(input("Enter index you want to update="))
+lst[u]=input("Enter name you want to update=")
+print("updated list=",lst)
+print("==============Delete=============")
+d=input("Enter name you want to delete=")
+lst.remove(d)
+print("delete update list=",lst)

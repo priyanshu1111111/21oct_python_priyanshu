@@ -1,0 +1,12 @@
+Name: Pankaj
+Id: 101
+Subject: Python
+
+Name: Rahul
+Id: 102
+Subject: PHP
+
+Name: Vivan
+Id: 103
+Subject: flutter
+

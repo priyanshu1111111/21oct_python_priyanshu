@@ -1,0 +1,20 @@
+Q1. What is Software?
+ANS :=Software is a set of instructions, data, or programs used to operate a computer and execute specific tasks. In simpler terms, it tells a computer how to function.
+
+Q2. What are the types of Applications?
+ANS :=1. Database apps.
+2. Custom apps.
+3. Web-based apps.
+4. Low code apps.
+5. No code apps.
+6. Enterprise apps.
+
+Q3. What is programming?
+ANS:= programming is a set of instruction to tell computer for specific task.
+
+Q4. What is Python?
+ANS:=Python is an interpreted, object-oriented, high-level
+programming language with dynamic semantics. Its high-level
+built in data structures, combined with dynamic typing and
+dynamic binding, make it very attractive for Rapid Application
+Development.
