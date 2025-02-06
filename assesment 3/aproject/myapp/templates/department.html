@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .department-container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Add Department Button */
+        .add-department {
+            text-align: right;
+            margin-bottom: 15px;
+        }
+
+        .btn-add {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .btn-add i {
+            margin-right: 5px;
+        }
+
+        .btn-add:hover {
+            background-color: #45a049;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: #2196f3;
+            color: #fff;
+        }
+
+        thead th {
+            padding: 10px;
+            text-align: left;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        td,
+        th {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        /* Action Buttons */
+        .btn-edit,
+        .btn-delete {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .btn-edit {
+            background-color: #ffc107;
+            color: #fff;
+        }
+
+        .btn-edit:hover {
+            background-color: #e0a800;
+        }
+
+        .btn-delete {
+            background-color: #f44336;
+            color: #fff;
+        }
+
+        .btn-delete:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="department-container">
+        <h1>Department Information</h1>
+        <div class="add-department">
+            <button class="btn-add">
+                <i class="fas fa-plus"></i> Add Department
+            </button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Department Name</th>
+                    <th>Head of Department</th>
+                    <th>Contact</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Computer Science</td>
+                    <td>Dr. Sarah Johnson</td>
+                    <td>+1 123 456 7890</td>
+                    <td>
+                        <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
+                        <button class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mechanical Engineering</td>
+                    <td>Dr. John Smith</td>
+                    <td>+1 987 654 3210</td>
+                    <td>
+                        <button class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
+                        <button class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Business Administration</td>
+                    <td>Dr. Emily Brown</td>
+                    <td>+1 555 666 7777</td>
+                    <td>
+                        <a href="" class="btn-edit"><i class="fas fa-edit"></i> Edit</button>
+                        <a href="" class="btn-delete"><i class="fas fa-trash"></i> Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

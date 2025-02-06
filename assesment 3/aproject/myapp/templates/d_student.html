@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Table</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .table-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background-color: #e91e63;
+            color: #fff;
+        }
+
+        thead th {
+            padding: 10px;
+            text-align: left;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #fdfdfd;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        td,
+        th {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        td {
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="table-container">
+        <h1>Student Information</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>City</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>John Doe</td>
+                    <td>New York</td>
+                    <td>+1 123 456 7890</td>
+                    <td>john.doe@example.com</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jane Smith</td>
+                    <td>Los Angeles</td>
+                    <td>+1 987 654 3210</td>
+                    <td>jane.smith@example.com</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Michael Brown</td>
+                    <td>Chicago</td>
+                    <td>+1 555 666 7777</td>
+                    <td>michael.brown@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>

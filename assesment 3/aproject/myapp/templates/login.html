@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #E91E63;
+            /* Pinkish Red */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Login Container */
+        .login-container {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            padding: 30px 25px;
+            width: 100%;
+            max-width: 400px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes buttonPulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 10px #E91E63, 0 0 20px #E91E63;
+            }
+
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px #FF80AB, 0 0 30px #FF80AB;
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 10px #E91E63, 0 0 20px #E91E63;
+            }
+        }
+
+        /* Highlight Login Title */
+        .login-container h2 {
+            text-align: center;
+            color: #E91E63;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* Input Group */
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+            position: relative;
+        }
+
+        .input-group label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            background: #f7f9fc;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            border-color: #E91E63;
+            box-shadow: 0 0 5px #E91E63;
+        }
+
+        .input-group i {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
+        /* Highlight Login Button */
+        .btn-login {
+            background: linear-gradient(45deg, #E91E63, #FF80AB);
+            background-size: 200%;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.4s ease-in-out;
+            animation: buttonPulse 2s infinite;
+        }
+
+        .btn-login:hover {
+            animation: none;
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.5);
+        }
+
+        /* Links */
+        .login-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .login-links a {
+            color: #E91E63;
+            text-decoration: none;
+        }
+
+        .login-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="/login" method="post">
+            <!-- User Type Selection -->
+            <div class="input-group">
+                <label for="user-type"><i class="fas fa-user-tag"></i> Login as</label>
+                <select id="user-type" name="user_type" required>
+                    <option value="">-- Select User Type --</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="student">Student</option>
+                </select>
+            </div>
+
+            <!-- Username -->
+            <div class="input-group">
+                <label for="username"><i class="fas fa-user"></i> Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <label for="password"><i class="fas fa-lock"></i> Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+
+            <!-- Login Button -->
+            <div class="button-container">
+                <button type="submit" class="btn-login">Login</button>
+            </div>
+        </form>
+
+        <!-- Links -->
+        <div class="login-links">
+            <p>Don't have an account? <a href="/signup">Signup</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #e91e63;
+            /* Cherry Red */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Signup Container */
+        .signup-container {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            padding: 30px 25px;
+            width: 100%;
+            max-width: 400px;
+            position: relative;
+            animation: slideIn 0.8s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes highlightPulse {
+            0% {
+                text-shadow: 0 0 5px #D2042D, 0 0 10px #D2042D, 0 0 15px #D2042D;
+            }
+
+            50% {
+                text-shadow: 0 0 15px #FF5C5C, 0 0 25px #FF5C5C, 0 0 35px #FF5C5C;
+            }
+
+            100% {
+                text-shadow: 0 0 5px #D2042D, 0 0 10px #D2042D, 0 0 15px #D2042D;
+            }
+        }
+
+        /* Highlight Signup Title */
+        .signup-container h2 {
+            text-align: center;
+            color: #D2042D;
+            /* Cherry Red */
+            font-size: 28px;
+            margin-bottom: 20px;
+            animation: highlightPulse 2s infinite;
+        }
+
+        /* User Type Dropdown */
+        .user-type {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .user-type label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .user-type select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            background: #f7f9fc;
+            transition: 0.3s;
+        }
+
+        .user-type select:hover {
+            border-color: #D2042D;
+        }
+
+        /* Input Group */
+        .input-group {
+            margin-bottom: 20px;
+            text-align: left;
+            position: relative;
+        }
+
+        .input-group label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            background: #f7f9fc;
+            transition: 0.3s;
+        }
+
+        .input-group input:hover {
+            border-color: #D2042D;
+        }
+
+        .input-group i {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
+        /* Highlight Signup Button */
+        .btn-signup {
+            background: linear-gradient(45deg, #D2042D, #FF5C5C);
+            background-size: 200%;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: all 0.4s ease-in-out;
+            box-shadow: 0 8px 20px rgba(210, 4, 45, 0.5);
+            animation: glow 1.5s infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 10px #D2042D, 0 0 20px #D2042D, 0 0 30px #D2042D;
+            }
+
+            50% {
+                box-shadow: 0 0 20px #FF5C5C, 0 0 30px #FF5C5C, 0 0 40px #FF5C5C;
+            }
+
+            100% {
+                box-shadow: 0 0 10px #D2042D, 0 0 20px #D2042D, 0 0 30px #D2042D;
+            }
+        }
+
+        .btn-signup:hover {
+            animation: none;
+            transform: scale(1.1);
+        }
+
+        /* Links */
+        .signup-links {
+            margin-top: 20px;
+        }
+
+        .signup-links a {
+            color: #D2042D;
+            text-decoration: none;
+        }
+
+        .signup-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="signup-container">
+        <h2>Signup</h2>
+        <form action="/signup" method="post">
+            <!-- User Type Selection -->
+            <div class="user-type">
+                <label for="user-type">Signup as:</label>
+                <select id="user-type" name="user_type" required>
+                    <option value="">-- Select User Type --</option>
+                    <option value="teacher">Teacher</option>
+                    <option value="student">Student</option>
+                </select>
+            </div>
+
+            <!-- Full Name -->
+            <div class="input-group">
+                <label for="fullname"><i class="fas fa-user"></i> Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="input-group">
+                <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Mobile Number -->
+            <div class="input-group">
+                <label for="mobile"><i class="fas fa-phone"></i> Mobile Number</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+            </div>
+
+            <!-- Username -->
+            <div class="input-group">
+                <label for="username"><i class="fas fa-user-circle"></i> Username</label>
+                <input type="text" id="username" name="username" placeholder="Create a username" required>
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <label for="password"><i class="fas fa-lock"></i> Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="input-group">
+                <label for="confirm-password"><i class="fas fa-lock"></i> Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm your password"
+                    required>
+            </div>
+
+            <!-- Signup Button -->
+            <div class="button-container">
+                <button type="submit" class="btn-signup">Signup</button>
+            </div>
+        </form>
+
+        <!-- Links -->
+        <div class="signup-links">
+            <p>Already have an account? <a href="/login">Login</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
